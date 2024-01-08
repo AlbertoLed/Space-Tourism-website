@@ -1,10 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./routes/Home"
 
 function App() {
 
   return (
-    <>
-      <h1>Hello typescript</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
