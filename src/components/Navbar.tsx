@@ -7,11 +7,12 @@ export default function Navbar() {
     const [showNav, toggleShowNav] = useState(false)
     return(
         <>
-                <div className="absolute w-full">
+                <div className="absolute w-[90%] left-[5%] top-6">
                     <div className="flex w-full items-center justify-between">
-                        <img src={logo} alt="Logo" />
+                        <img src={logo} alt="Logo"
+                        className="w-[40px]" />
                         <FaBars
-                        className="text-4xl hover:cursor-pointer"
+                        className="text-text text-3xl hover:cursor-pointer"
                           onClick={() => toggleShowNav(prev => !prev)}
                         />
                     </div>
