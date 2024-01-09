@@ -1,6 +1,6 @@
 export default function Home() {
 
-    const bgImg = "bg-[url('./home/background-home-mobile.jpg')]"
+    const bgImg = "bg-[url('./assets/home/background-home-mobile.jpg')]"
 
     return(
         <header className={`${bgImg} min-h-[100vh] bg-cover text-text grid content-center pt-[60px]`}>
