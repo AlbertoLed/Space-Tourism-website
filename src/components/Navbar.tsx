@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 import { FaBars } from "react-icons/fa"
 import logo from "../../public/logo.svg"
 
@@ -17,7 +17,12 @@ export default function Navbar() {
                         />
                     </div>
                         {showNav ? 
-                            <nav>This is the navbar</nav>
+                            <nav className="text-text">
+                                <NavLink to="."><span>00</span> Home</NavLink>
+                                <NavLink to="destination"><span>01</span> Destination</NavLink>
+                                <NavLink to="crew"><span>02</span> Crew</NavLink>
+                                <NavLink to="technology"><span>03</span> Technology</NavLink>
+                            </nav>
                             : null
                         }
                 </div>
