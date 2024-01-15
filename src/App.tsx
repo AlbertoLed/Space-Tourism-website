@@ -5,7 +5,7 @@ import Destination from "./routes/destination/Destination"
 import DestinationPlace from "./routes/destination/DestinationPlace"
 import Crew from "./routes/crew/Crew"
 import CrewMember from "./routes/crew/CrewMember"
-// import Technology from "./routes/technology/Technology"
+import Technology from "./routes/technology/Technology"
 import { moon, mars, europa, titan, douglas, mark, victor, anousheh } from "./data"
 
 function App() {
@@ -27,11 +27,11 @@ function App() {
             <Route path="victor" element={<CrewMember member={victor} />} />
             <Route path="anousheh" element={<CrewMember member={anousheh} />} />
           </Route>
-          {/* <Route path="technology" element={<Technology />}>
+          <Route path="technology" element={<Technology />}>
             <Route index element={<h1>Launch vehicle</h1>}/>
             <Route path="spaceport" element={<h1>Spaceport</h1>}/>
             <Route path="space" element={<h1>Space capsule</h1>}/>
-          </Route> */}
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
