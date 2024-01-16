@@ -7,14 +7,16 @@ export default function Crew() {
 
     return(
         <section className={`${bgImg} min-h-[100vh] bg-cover text-text grid content-center pt-[60px]`}>
-            <h1><span>02</span>Meet your crew</h1>
-            <div className="flex space-x-4">
-                <NavDot to="." />
-                <NavDot to="mark" />
-                <NavDot to="victor" />
-                <NavDot to="anousheh" />
+            <div className="w-[90%] mx-auto flex flex-col space-y-[30px]">
+                <h1 className="text-primary font-barlow-con uppercase text-lg tracking-widest mx-auto"><span className="text-secondary font-bold">02</span> Meet your crew</h1>
+                <div className="flex space-x-4 order-2 mx-auto">
+                    <NavDot to="." />
+                    <NavDot to="mark" />
+                    <NavDot to="victor" />
+                    <NavDot to="anousheh" />
+                </div>
+                <Outlet />
             </div>
-            <Outlet />
         </section>
     )
 }
@@ -27,7 +29,7 @@ function NavDot(props: {to: string}) {
     const style = location.pathname.includes(to) || to === "." && !location.pathname.includes("crew/")
     return(
         <div 
-            className={`w-5 h-5 rounded-full hover:cursor-pointer ${style ? 'bg-white' : 'bg-slate-500'}`}
+            className={`w-3 h-3 rounded-full hover:cursor-pointer ${style ? 'bg-primary' : 'bg-secondary'}`}
             onClick={() => navigateTo(to)}>
         </div>
     )
