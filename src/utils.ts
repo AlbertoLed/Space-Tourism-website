@@ -14,3 +14,13 @@ export interface CrewMember {
     bio: string;
     image: string;
 }
+
+export interface Technology {
+    id: number;
+    name: string;
+    images: {
+        portrait: string;
+        landscape: string;
+    };
+    description: string;
+}

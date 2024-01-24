@@ -1,5 +1,5 @@
 import data from "../data.json"
-import { Destination, CrewMember } from "./utils"
+import { Destination, CrewMember, Technology } from "./utils"
 import imgMoon from "./assets/destination/image-moon.png"
 import imgMars from "./assets/destination/image-mars.png"
 import imgEuropa from "./assets/destination/image-europa.png"
@@ -8,6 +8,12 @@ import imgDouglas from "./assets/crew/image-douglas-hurley.png"
 import imgMark from "./assets/crew/image-mark-shuttleworth.png"
 import imgVictor from "./assets/crew/image-victor-glover.png"
 import imgAnousheh from "./assets/crew/image-anousheh-ansari.png"
+import imgLaunchLandscape from "./assets/technology/image-launch-vehicle-landscape.jpg"
+import imgLaunchPortrait from "./assets/technology/image-launch-vehicle-portrait.jpg"
+import imgSpaceportLandscape from "./assets/technology/image-spaceport-landscape.jpg"
+import imgSpaceportPortrait from "./assets/technology/image-spaceport-portrait.jpg"
+import imgCapsuleLandscape from "./assets/technology/image-space-capsule-landscape.jpg"
+import imgCapsulePortrait from "./assets/technology/image-space-capsule-portrait.jpg"
 
 export const moon: Destination = {
     name: data.destinations[0].name,
@@ -62,4 +68,30 @@ export const anousheh: CrewMember =  {
     bio: data.crew[3].bio,
     image: imgAnousheh,
 }
-console.log(data.crew)
+
+export const technologies: Technology[] = [
+    {
+        id: 1,
+        ...data.technology[0],
+        images: {
+            landscape: imgLaunchLandscape,
+            portrait: imgLaunchPortrait,
+        },
+    },
+    {
+        id: 2,
+        ...data.technology[1],
+        images: {
+            landscape: imgSpaceportLandscape,
+            portrait: imgSpaceportPortrait,
+        },
+    },
+    {
+        id: 3,
+        ...data.technology[2],
+        images: {
+            landscape: imgCapsuleLandscape,
+            portrait: imgCapsulePortrait,
+        },
+    },
+]
