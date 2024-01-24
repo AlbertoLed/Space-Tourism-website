@@ -27,11 +27,7 @@ function App() {
             <Route path="victor" element={<CrewMember member={victor} />} />
             <Route path="anousheh" element={<CrewMember member={anousheh} />} />
           </Route>
-          <Route path="technology" element={<Technology />}>
-            <Route index element={<h1>Launch vehicle</h1>}/>
-            <Route path="spaceport" element={<h1>Spaceport</h1>}/>
-            <Route path="space" element={<h1>Space capsule</h1>}/>
-          </Route>
+          <Route path="technology/:id" element={<Technology />} />
         </Route>
       </Routes>
     </BrowserRouter>

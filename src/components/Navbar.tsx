@@ -21,7 +21,7 @@ export default function Navbar() {
                                 <NavLink to="."><span>00</span> Home</NavLink>
                                 <NavLink to="destination"><span>01</span> Destination</NavLink>
                                 <NavLink to="crew"><span>02</span> Crew</NavLink>
-                                <NavLink to="technology"><span>03</span> Technology</NavLink>
+                                <NavLink to="technology/1"><span>03</span> Technology</NavLink>
                             </nav>
                             : null
                         }
